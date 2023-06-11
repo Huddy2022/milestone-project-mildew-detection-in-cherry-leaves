@@ -11,3 +11,4 @@ kaggle.json
 inputs/cherry-leaves_dataset/cherry-leaves/test
 inputs/cherry-leaves_dataset/cherry-leaves/train
 outputs/v1/hypertuning/*
+outputs/v1/powdery_mildew_detection_model.h5
