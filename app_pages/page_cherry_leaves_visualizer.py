@@ -10,7 +10,7 @@ import itertools
 import random
 
 
-def page_cells_visualizer_body():
+def page_cherry_leaves_visualizer_body():
     st.write("### Cherry Leaves Visualizer")
     st.info(
         f"* The client is interested to have a study to visually differentiate "
@@ -19,9 +19,9 @@ def page_cells_visualizer_body():
     version = 'v2'
     if st.checkbox("Difference between average and variability image"):
 
-        avg_parasitized = plt.imread(
+        avg_powdery_mildew = plt.imread(
             f"outputs/{version}/avg_var_powdery_mildew.png")
-        avg_uninfected = plt.imread(f"outputs/{version}/avg_var_healthy.png")
+        avg_healthy = plt.imread(f"outputs/{version}/avg_var_healthy.png")
 
         st.warning(
             f"* We notice the average and variability images didn't show "
