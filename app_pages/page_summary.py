@@ -7,28 +7,38 @@ def page_summary_body():
     st.write("### Quick Project Summary")
 
     st.info(
-        f"**General Information**\n"
-        f"* Malaria is a parasitic infection transmitted by the bite of infected female "
-        f"Anopheles mosquitoes.\n"
-        f"* A blood smear sample is collected, mixed with a reagent and examined in "
-        f"the microscope. Visual criteria are used to detect malaria parasites.\n"
-        f"* According to [WHO](https://www.who.int/news-room/fact-sheets/detail/malaria), "
-        f"in 2019, there were an estimated  229 million cases of malaria worldwide and an "
-        f"estimated 409 thousand deaths due to this diseease. "
-        f"Children <5 years are the most vulnerable group, accounting for 67% (274 thousand) "
-        f"of all malaria deaths worldwide in 2019.\n\n"
-        f"**Project Dataset**\n"
-        f"* The available dataset contains 5643 out of +27 thousand images taken from "
-        f"blood smear workflow (when a drop of blood it taken on a glass slide) of cells that "
-        f"are parasitized or uninfected with malaria.")
+        f"**General Information**\n\n"
+        f"Powdery mildew is a parasitic fungal disease caused by Podosphaera clandestina in cherry trees."
+        f" When the fungus begins to take over the plants, a layer of mildew made up of many spores forms across the top of the leaves."
+        f" The disease is particularly severe on new growth, can slow down the growth of the plant, and can infect fruit as well, causing direct crop loss."
+        f"\n\nVisual criteria used to detect infected leaves are:\n\n"
+        f"* Light-green, circular lesion on either leaf surface.\n"
+        f"* Subtle white cotton-like growth develops in the infected area on either leaf surface and on the fruits, thus reducing yield and quality."
+        f"\n\n"
+        f"**Powdery Mildew Information**\n\n"
+        f"* Powdery Mildew is a disease infecting herbaceous and woody plants, and can result "
+        f"in a low fruit yield in the case of Cherry Trees.\n"
+        f"* The current process is manual verification if a given cherry tree contains powdery"
+        f"mildew.\n"
+        f"* An employee spends around 30 minutes in each tree, taking a few samples of "
+        f"tree leaves and verifying visually if the leaf tree is healthy or has powdery" f"mildew.\n"
+        f"* According to the [Connecticut Portal](https://portal.ct.gov/CAES/Fact-Sheets/Plant-Pathology/Powdery-Mildew),"
+        f" powdery mildews are easily recognized by the white, powdery growth of the fungus on infected portions of the plant host."
+        f" The powdery appearance results from the superficial growth of the fungus as thread-like strands (hyphae) over the plant surface"
+        f" and the production of chains of spores (conidia). Colonies can vary in appearance from fluffy and white to sparse and gray."
+    )
 
     st.write(
         f"* For additional information, please visit and **read** the "
-        f"[Project README file](https://github.com/GyanShashwat1611/WalkthroughProject01/blob/main/README.md).")
+        f"[Project README file](https://github.com/Huddy2022/milestone-project-mildew-detection-in-cherry-leaves/blob/main/README.md).")
 
     st.success(
-        f"The project has 2 business requirements:\n"
-        f"* 1 - The client is interested in having a study to differentiate "
-        f"a parasitized and uninfected cell visually.\n"
-        f"* 2 - The client is interested to tell whether a given cell contains malaria parasite or not. "
+        f"**Project Objectives**\n\n"
+        f"The project aims to achieve the following objectives:\n\n"
+        f"1. Conduct a study to visually differentiate a healthy leaf from an infected leaf."
+        f"\n\n"
+        f"2. Develop an accurate prediction model to determine whether a given leaf is infected by powdery mildew or not."
+        f"\n\n"
+        f"3. Provide the ability to download a prediction report of the examined leaves."
+        f"\n"
     )
