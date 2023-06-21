@@ -13,7 +13,7 @@ from src.machine_learning.predictive_analysis import (
 
 def page_powdery_mildew_detector_body():
     st.info(
-        f"* The client is interested to tell whether a given cherry leaf contains Powdery Mildew "
+        f"* The client is interested to determine whether a given cherry leaf contains Powdery Mildew "
         f"or not."
     )
 
@@ -25,7 +25,7 @@ def page_powdery_mildew_detector_body():
     st.write("---")
 
     images_buffer = st.file_uploader('Upload Cherry Leaf image samples. You may select more than one.',
-                                     type='jpg', accept_multiple_files=True)
+                                     type=['png', 'jpg'], accept_multiple_files=True)
 
     if images_buffer is not None:
         df_report = pd.DataFrame([])
@@ -43,8 +43,8 @@ def page_powdery_mildew_detector_body():
                 resized_img, version=version)
             plot_predictions_probabilities(pred_proba, pred_class)
 
-            df_report = df_report.append({"Name": image.name, 'Result': pred_class},
-                                         ignore_index=True)
+            df_report = df_report.append(
+                {"Name": image.name, 'Result': pred_class}, ignore_index=True)
 
         if not df_report.empty:
             st.success("Analysis Report")
