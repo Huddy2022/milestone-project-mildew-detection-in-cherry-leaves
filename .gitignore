@@ -26,3 +26,5 @@ outputs/v7/hypertuning/*
 outputs/v7/powdery_mildew_detection_model.h5
 outputs/v8/hypertuning/*
 outputs/v8/powdery_mildew_detection_model.h5
+outputs/v9/hypertuning/*
+outputs/v9/powdery_mildew_detection_model.h5
