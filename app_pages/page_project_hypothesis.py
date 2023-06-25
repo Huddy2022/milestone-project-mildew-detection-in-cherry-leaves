@@ -35,7 +35,7 @@ def page_project_hypothesis_body():
         f"The model will was designed to classify cherry leaves as healthy or "
         f"infected with Powdery Mildew based on their visual features. \n"
         f"4. ### Model Evaluation:\n"
-        f"Each version of the seven models was trained on a training set "
+        f"Each version of the nine models was trained on a training set "
         f"and evaluated on a separate test set. The evaluation included "
         f"various metrics such as accuracy, precision, recall, and F1-score "
         f"to assess the model's ability to accurately classify cherry leaves "
