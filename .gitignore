@@ -13,7 +13,6 @@ inputs/cherry-leaves_dataset/cherry-leaves/train
 outputs/v1/hypertuning/*
 outputs/v1/powdery_mildew_detection_model.h5
 outputs/v2/hypertuning/*
-outputs/v2/powdery_mildew_detection_model.h5
 outputs/v3/hypertuning/*
 outputs/v3/powdery_mildew_detection_model.h5
 outputs/v4/hypertuning/*
