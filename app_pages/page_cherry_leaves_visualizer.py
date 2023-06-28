@@ -13,8 +13,9 @@ import random
 def page_cherry_leaves_visualizer_body():
     st.write("### Cherry Leaves Visualizer")
     st.info(
-        f"* The client is interested to have a study to visually differentiate "
-        f"between an infected powdery mildew cherry leaf and healthy cherry leaf.")
+        f"* The client is interested to have a study to visually differentiate"
+        f" between an infected powdery mildew cherry leaf and healthy "
+        f"cherry leaf.")
 
     version = 'v2'
     if st.checkbox("Difference between average and variability image"):
@@ -24,30 +25,52 @@ def page_cherry_leaves_visualizer_body():
         avg_healthy = plt.imread(f"outputs/{version}/avg_var_healthy.png")
 
         st.warning(
-            f"Our analysis suggests that cherry leaves affected by powdery mildew exhibit distinct visual characteristics."
-            f" The first noticeable sign is the presence of light-green, circular lesions on either leaf surface, which are followed by the emergence of a subtle white cotton-like growth in the infected area."
+            f"Our analysis suggests that cherry leaves affected by powdery "
+            f"mildew exhibit distinct visual characteristics."
+            f" The first noticeable sign is the presence of light-green, "
+            f"circular lesions on either leaf surface, which are followed by "
+            f"the emergence of a subtle white cotton-like growth in the "
+            f"infected area."
             f"\n\n"
-            f"In our data visualization notebook, we have visually explored and confirmed the existence of these markers through the analysis of leaf images."
-            f" We observed that healthy leaves exhibit consistent color patterns, while leaves affected by powdery mildew show distinct irregularities and growth patterns."
+            f"In our data visualization notebook, we have visually explored "
+            f"and confirmed the existence of these markers through the "
+            f"analysis of leaf images."
+            f" We observed that healthy leaves exhibit consistent color "
+            f"patterns, while leaves affected by powdery mildew show distinct "
+            f"irregularities and growth patterns."
             f"\n\n"
-            f"To enhance the accuracy of our machine learning model, it is crucial to preprocess the images before training."
-            f" A vital step in this process is normalization, where we adjust the images to a standardized format."
-            f" By calculating the mean and standard deviation of the entire dataset, we ensure that our model can effectively extract features and make accurate predictions."
-            f" This normalization procedure was performed on the dataset as part of our data visualization and preprocessing efforts.")
+            f"To enhance the accuracy of our machine learning model, it is "
+            f"crucial to preprocess the images before training."
+            f" A vital step in this process is normalization, where we adjust "
+            f"the images to a standardized format."
+            f" By calculating the mean and standard deviation of the entire "
+            f"dataset, we ensure that our model can effectively extract "
+            f"features and make accurate predictions."
+            f" This normalization procedure was performed on the dataset as "
+            f"part of our data visualization and preprocessing efforts.")
 
         st.image(avg_powdery_mildew,
-                 caption='Powdery Mildew cherry leaf - Avegare and Variability')
-        st.image(avg_healthy, caption='Healthy cherry leaf - Average and Variability')
+                 caption='Powdery Mildew cherry leaf - '
+                         'Avegare and Variability')
+        st.image(avg_healthy, caption='Healthy cherry leaf - '
+                                      'Average and Variability')
         st.write("---")
 
-    if st.checkbox("Differences between average powdery mildew cherry leaf and average healthy cherry leaf"):
+    if st.checkbox("Differences between average powdery mildew cherry "
+                   "leaf and average healthy cherry leaf"):
         diff_between_avgs = plt.imread(f"outputs/{version}/avg_diff.png")
 
         st.warning(
-            f"* During our analysis, we observed that the visual differences between healthy and powdery mildew-infected cherry leaves were not easily differentiated.\n"
-            f"* Although there is a slight variation in the appearance of the affected area on the cherry leaf, with white stripes."
-            f" Both datasets contain a significant number of leaves for powdery mildew and healthy leaves."
-            f" The ImageDataGenerator task, which includes flipping and rotating images, will help the model generalize and learn from the available data effectively.")
+            f"* During our analysis, we observed that the visual differences "
+            f"between healthy and powdery mildew-infected cherry leaves were "
+            f"not easily differentiated.\n"
+            f"* Although there is a slight variation in the appearance of "
+            f"the affected area on the cherry leaf, with white stripes."
+            f" Both datasets contain a significant number of leaves for "
+            f"powdery mildew and healthy leaves."
+            f" The ImageDataGenerator task, which includes flipping and "
+            f"rotating images, will help the model generalize and learn from "
+            f"the available data effectively.")
         st.image(diff_between_avgs,
                  caption='Difference between average images')
 
