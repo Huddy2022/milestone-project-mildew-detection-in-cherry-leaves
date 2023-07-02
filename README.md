@@ -118,23 +118,48 @@ Page 5: ML Performance & evaluation
 * Displays model evaluation metrics such as accuracy, precision, recall, and F1-score.
 * Includes a confusion matrix visualization to understand the model's performance.
 
+## The CRISP-DM Methodology
+
+My CRISP-DM provides a structured approach for the data mining project. It outlines the different phases of a project, the tasks within each phase, and the relationships between these tasks.
+
+To document this process for the Powdery Mildew detection project, a Kanban Board provided by GitHub was used in the repository's project section. A Kanban board is an agile project management tool that helped visualize the work, limit work-in-progress, and improve efficiency. It uses cards and columns to organize tasks and facilitate continuous improvement.
+
+In this project, the CRISP-DM process was divided into sprints. Each sprint is associated with epics based on the CRISP-DM tasks. These epics were further broken down into individual tasks. Throughout the workflow, tasks can progress through different statuses such as To Do, In Progress, and Done, providing a clear overview of the project's progress.
+
+In addition to the tasks and epics within the CRISP-DM process, the Powdery Mildew detection project also incorporated user stories. User stories represent specific functionalities or features from the perspective of end users.
+
+To capture these user stories, comments were used within the Kanban board to provide detailed information about the tasks. These comments outlined the specific requirements, objectives, and expectations related to each user story.
+
+By including user stories in the comments section, I could ensure that the implementation of each task aligned with the desired functionalities and provided value to the end users. This approach helped to prioritize development efforts, track progress, and maintain a user-centric focus throughout the project.
 
 ## Unfixed Bugs
-* You will need to mention unfixed bugs and why they were unfixed. This section should include shortcomings of the frameworks or technologies used. Although time can be a significant variable for consideration, paucity of time and difficulty understanding implementation is not a valid reason to leave bugs unfixed.
+
+Images producing false predicitons
+
+* In terms of unfixed bugs, one known issue that has been identified is related to the incorrect image appearing in the confusion matrix. The confusion matrix is a visual representation of the performance of a classification model, showing the predicted labels versus the actual labels.
+* In this case, there seems to be a bug where an incorrect image is displayed within the confusion matrix, possibly misrepresenting the actual performance of the model. This discrepancy can lead to confusion and misinterpretation of the model's accuracy and effectiveness.
+* Healthy images wrongly predicted as Powdery Mildew:
+powdery_mildew/4c756b73-5e7d-40ec-9b36-1866c49f2e43___FREC_Pwd.M 5156_flipLR.JPG
+* The image looks shadowed which can introduce variations in pixel intensities, which may affect the features extracted by the algorithm and lead to misclassifications.
+* To address the issue of misclassification caused by shadowed images, we could consider implementing techniques such as further data augmentation, image enhancement, and fine-tuning the model to improve the accuracy of powdery mildew detection.
 
 ## Deployment
 ### Heroku
 
-* The App live link is: https://YOUR_APP_NAME.herokuapp.com/ 
+* The App live link is: https://powdery-mildew-detection-86ce1c83ad33.herokuapp.com/ 
+
 * Set the runtime.txt Python version to a [Heroku-20](https://devcenter.heroku.com/articles/python-support#supported-runtimes) stack currently supported version.
 * The project was deployed to Heroku using the following steps.
 
-1. Log in to Heroku and create an App
+1. Log in to Heroku and create an App with deseried name
 2. At the Deploy tab, select GitHub as the deployment method.
-3. Select your repository name and click Search. Once it is found, click Connect.
-4. Select the branch you want to deploy, then click Deploy Branch.
-5. The deployment process should happen smoothly if all deployment files are fully functional. Click now the button Open App on the top of the page to access your App.
-6. If the slug size is too large then add large files not required for the app to the .slugignore file. 
+3. Select your repository name and click Search. Once it is found, click Connect
+4. Log into Heroku CLI in IDE workspace terminal using the bash command: heroku login -i and enter user credentials
+5. In terminal set heroku heroku stack:set heroku-20 -a appname, for compatibility with the Python 3.8.12 version used for this project
+6. Select the main branch, then click Deploy Branch.
+7. Wait for the logs to run while the dependencies are installed and the app is being built.
+8. Once finished and succesfully deployed I could open the app from the button at the top.
+9. If the slug size was too large then I added large files not required for the app to the .slugignore file.
 
 
 ## Main Data Analysis and Machine Learning Libraries
