@@ -144,9 +144,10 @@ powdery_mildew/4c756b73-5e7d-40ec-9b36-1866c49f2e43___FREC_Pwd.M 5156_flipLR.JPG
 * To address the issue of misclassification caused by shadowed images, we could consider implementing techniques such as further data augmentation, image enhancement, and fine-tuning the model to improve the accuracy of powdery mildew detection.
 
 ## Deployment
+
 ### Heroku
 
-* The App live link is: https://powdery-mildew-detection-86ce1c83ad33.herokuapp.com/ 
+* The App live link is: [Cherry leaf powdery mildew detector app](https://powdery-mildew-detection-86ce1c83ad33.herokuapp.com/)
 
 * Set the runtime.txt Python version to a [Heroku-20](https://devcenter.heroku.com/articles/python-support#supported-runtimes) stack currently supported version.
 * The project was deployed to Heroku using the following steps.
@@ -161,28 +162,45 @@ powdery_mildew/4c756b73-5e7d-40ec-9b36-1866c49f2e43___FREC_Pwd.M 5156_flipLR.JPG
 8. Once finished and succesfully deployed I could open the app from the button at the top.
 9. If the slug size was too large then I added large files not required for the app to the .slugignore file.
 
-
 ## Main Data Analysis and Machine Learning Libraries
-* Here you should list the libraries used in the project and provide an example(s) of how you used these libraries.
 
+* numpy 1.19.2 - Used for converting data to arrays.
+* pandas 1.1.2 - Used for creating and saving data as dataframes.
+* matplotlib 3.3.1 - Used for plotting the sets' distribution.
+* seaborn 0.11.0 - Used for plotting the model's confusion matrix.
+* plotly 4.12.0 - Used for plotting the model's learning curve.
+* streamlit 0.85.0 - Used for creating the dashboard.
+* scikit-learn 0.24.2 - Used for evaluating the model.
+* tensorflow-cpu 2.6.0 - Used for creating the model.
+* keras 2.6.0 - Used for setting the model's hyperparameters.
 
-## Credits 
+### Other technologies used
 
-* In this section, you need to reference where you got your content, media and from where you got extra help. It is common practice to use code from other repositories and tutorials. However, it is necessary to be very specific about these sources to avoid plagiarism. 
-* You can break the credits section up into Content and Media, depending on what you have included in your project. 
+* Streamlit - Development of dashboard for presentation of data and project delivery
+* Heroku - Deployment of dashboard as web application
+* Jupiter Notebook - to edit code for this project
+* Kaggle - to download datasets for this project
+* Git/GitHub - Version control and storage of source code
+* Codeanywhere - IDE Workspace in which application was developed
 
-### Content 
+## Testing
 
-- The text for the Home page was taken from Wikipedia Article A.
-- Instructions on how to implement form validation on the Sign-Up page were taken from [Specific YouTube Tutorial](https://www.youtube.com/).
-- The icons in the footer were taken from [Font Awesome](https://fontawesome.com/).
+## Credits
+
+### Content
+
+* The cherry leaves dataset was linked from Kaggle and created by Code Institute.
+* The CRISP-DM that was created on my github, i modelled after using this site [Specific Datascience website](https://www.datascience-pm.com/crisp-dm-2/)<>.
+* Many of the project's functions were transferred from Code Institute's sample Malaria Detector project.
+* For the Keras Tuner i got alot of insight from this website [Tensorflow](https://www.tensorflow.org/tutorials/keras/keras_tuner/).
+* When i came to tuning the hyperperamter searching i used inspriation from this website for the regualizers and batch normalization [Keras website](https://keras.io/api/layers/regularizers/).
 
 ### Media
 
-- The photos used on the home and sign-up page are from This Open-Source site.
-- The images used for the gallery page were taken from this other open-source site.
+*
 
+## Acknowledgements
 
+* My mentor, Mo Shami, for supervising this project.
 
-## Acknowledgements (optional)
-* Thank the people that provided support throughout this project.
+## Deployed version at [Cherry leaf powdery mildew detector app](https://powdery-mildew-detection-86ce1c83ad33.herokuapp.com/)
