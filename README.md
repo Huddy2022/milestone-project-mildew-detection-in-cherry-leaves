@@ -71,15 +71,27 @@ Hypothesis 2: Does softmax perform better than sigmoid as the activation functio
 
 ## Development and Machine Learning Model Iterations
 
-* v1-
-* v2 -
-* v3 -
-* v4 -
-* v5 -
-* v6 -
-* v7 -
-* v8 -
-* v9 -
+* The Tensorflow binary image classification model went through a series of iterations and hyperparameters in order to produce an optimised model capable of handling the data.
+* Version 2 was the eventual accepted production version. Legacy versions of the models and their performance can be found in the 'Outputs' section of this repository.
+* The general structure of the model was heavily influenced by Code Institute's Malaria Detector model for binary classification, and adjusted and tested upon to find optimal hyperparameters.
+* Before the model trained on it, data was augmented using TensorFlow's ImageDataGenerator, which re shaped, flipped, and rotated the images in order to provide a larger dataset and increase the model's robustness to variations in the input images. This augmentation technique helped prevent overfitting and allowed the model to generalize better to unseen data.
+* The initial model was constructed of three consecutive pairs of 2D convolution and pooling layers used to isolate areas of importance and contrast within the image for the model to train itself on. The numbers of filters for the three convolution layers were set to values of 32, 64, and 64 respectively and the kernel sizes at (3,3). Powers of 2 were chosen as filter numbers for the convolution layers to optimise processing. Pooling layer pool sizes were set to the industry standard value of (2,2).
+* This is followed by a single dense layer of many neurons (160 in the final production model), a dropout layer of 0.5 in order to avoid overfitting of the model, and a final dense layer containing a single neuron with a sigmoid activation function, as is standard for binary classification models.
+* Before running each iteration of the model, the most suitable hyperparameters out of a user-provided selection were attained using the Keras Tuner.
+* Two hyperparameters were selected in this search process for optimisation; the neuron count in the main densely connected layer of the neural network, and the learning rate of the model. These values were chosen with guidance from TensorFlow's Keras Tuner Tutorial and later simplified to remove those hyperparameter combinations that performed consistently poorly in order to increase tuning speed.
+* The hyperparameter optimisation search was conducted using the Hyperband search algorithm.
+* The data was loaded into the model in batch sizes of 20, a relatively small even number which was chosen both to further improve time efficiency of the model and avoid overfitting.
+* TensorFlow's EarlyStopping function was included to halt training of the model early when the loss value on validation data was no longer clearly improving (a 'patience' value of 3 was passed in).
+* The model was then trained over a possible 25 epochs with steps per epoch set to the train set class lengths divided by 20 (the batch size) and an early stopping function were passed into the fit() function.
+* Version 1 (V1) - The initial model was developed without hyperparameter tuning using the original dataset of cherry leaf images to detect powdery mildew. Although the model achieved a high accuracy of 99.64%, it was clear that the dataset size needed improvement for better performance. Hyperparameter tuning was attempted using the Keras Tuner, but the search took over 4 hours, and an error prevented early stopping. Despite the high accuracy, the training time was inefficient for the project.
+* Version 2 (V2) - To address the issues encountered in V1, the images were resized to 100x100 to expedite the hyperparameter search. The search time was significantly reduced to under 30 minutes, and the hyperparameter search successfully identified a layer size of 160 and an optimizer value of 0.001. The model achieved an accuracy of 99.88% and a loss of 0.0041, demonstrating improved performance compared to V1.
+* Version 3 (V3) - In an attempt to further speed up the search and training process, the image size was reduced to 75x75 while maintaining the same hyperparameter search settings as V2. The search time was further reduced to approximately 17 minutes, and the model obtained a layer size of 224 and an optimizer value of 0.001. However, the accuracy of the trained model decreased to 99.64%, with a loss of 0.016.
+* Version 4 (V4) - Returning to the image size of 100x100 used in V2, regularization techniques such as L1 and L2 were introduced to fine-tune the model. Various filter and flatten configurations were attempted, but due to excessive search time, adjustments were made to simplify the model architecture. The resulting search, which lasted about 1 hour and 30 minutes, identified a layer size of 96 and an optimizer value of 0.001. However, the model failed to learn, with an accuracy stuck at 50% and a loss of 0.693.
+* Version 5 (V5) - Building upon the regularizers introduced in V4, additional configurations were explored by including the none regularizer at the end. The filter sizes were adjusted, and the model achieved a similar search speed to V4. The hyperparameter search identified a layer size of 224 and an optimizer value of 0.001. Although the model's training time improved compared to V4, the accuracy and loss did not surpass those achieved in V2.
+* Version 6 (V6) - Batch normalization was introduced in this version to enhance model training during epochs. The filter and flatten configurations were similar to V5, with a dropout rate of 0.3. The search speed improved, and the hyperparameter search yielded a layer size of 256 and an optimizer value of 0.001. The model achieved an accuracy of 99.64% and a loss of 0.014, showing a slight improvement in loss compared to V5.
+* Version 7 (V7) - Continuing with the regularizers and batch normalization, a change was made to the dropout rate, increasing it to 0.4. The hyperparameter search resulted in a layer size of 128 and an optimizer value of 0.0001. However, the model showed signs of overfitting towards the end of training, resulting in a decreased accuracy of 98.93% and an increased loss of 0.057.
+* Version 8 (V8) - Regularizers and batch normalization were abandoned in favor of a model architecture similar to V2. The filter sizes and other hyperparameters remained the same, but the activation function was changed to Tanh for a larger range. The hyperparameter search identified a layer size of 224 and an optimizer value of 0.001. The model achieved a similar accuracy of 99.88% to V2, but the loss slightly increased to 0.0010.
+* Version 9 (V9) - The final version retained the same architecture as V2, but the activation function was changed to softmax to better suit the multiclass nature of the problem. The hyperparameter search resulted in a layer size of 128 and an optimizer value of 0.001. The model achieved a comparable accuracy of 99.88%, but the loss slightly increased to 0.0096. Notably, the softmax activation had fewer trainable parameters compared to the sigmoid activation used in V2.
 
 ## Dashboard Design & features
 
