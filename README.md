@@ -197,6 +197,16 @@ powdery_mildew/4c756b73-5e7d-40ec-9b36-1866c49f2e43___FREC_Pwd.M 5156_flipLR.JPG
 
 ## Testing
 
+### Manual Testing
+
+* I manually tested each page of the dashboard after deployment and documented each test in the kanban board [Kanban](https://github.com/users/Huddy2022/projects/5).
+* With each test i documented in the comment section, its feature, action, expected result and actual result.
+
+### Validation
+
+* All of the Python code in this project was validated as conforming to PEP8 standards using [Pep8](https://pep8ci.herokuapp.com/).
+* For the Streamlit app pages and source code files, I simply edited the code until no errors were recorded in the Problems section of the codeanywhere workspace.
+
 ## Credits
 
 ### Content
