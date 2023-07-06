@@ -1,6 +1,6 @@
 # Cherry Leaf Powdery Mildew Detector
 
-Deployed version : <https://powdery-mildew-detection-86ce1c83ad33.herokuapp.com/>
+Deployed version : [Cherry leaf powdery mildew detector app](https://powdery-mildew-detection-86ce1c83ad33.herokuapp.com/)
 
 ## Dataset Content
 
@@ -102,12 +102,22 @@ Page 1: Quick Project Summary
   * Includes general information about powdery mildew in cherry trees and the visual criteria used to detect infected leaves.
   * Contains links to additional information in the project README file.
 
+![Quick project summary page]()
 Page 2: Cherry Leaves Visualizer
 
 Answers buisness requirements 1
 
-* Allows the visualization of cherry leaves, with a focus on the differences between healthy leaves and leaves infected with powdery mildew.
-* Provides options to display the difference between average and variability images, the differences between average powdery mildew cherry leaves and average healthy cherry leaves, and an image montage of cherry leaves.
+* Allows the visualization of cherry leaves, with a focus on the differences between average healthy leaves and infected with powdery mildew compared to varaibility images.
+
+![Difference between average and variability images]()
+
+* Provides options to display the difference between average powdery mildew cherry leaves and average healthy cherry leaves.
+
+![Difference between average powdery mildew cherry leaves and average healthy cherry leaves]()
+
+* It also provides the client with an image montage, where the client can choose an array of random images of either healthy or powdery mildew images.
+
+![Image Montage]()
 
 Page 3: Powdery Mildew Detector
 
@@ -115,8 +125,14 @@ Answers buisness requirements 2
 
 * Used for detecting powdery mildew in cherry leaves.
 * Provides the option to upload cherry leaf images for live prediction.
+
+![Powdery mildew detector]()
+
 * Processes the uploaded images and uses a machine learning model to predict whether the leaves are healthy or infected with powdery mildew.
 * Displays the predictions along with a summary report.
+* A download button offer the client an option to save the model predictions in a timestamped CSV file
+
+![Predictions report]()
 
 Page 4: Project Hypothesis & validation
 
@@ -124,11 +140,22 @@ Page 4: Project Hypothesis & validation
 * Explains the steps followed in the project, including data collection, data preprocessing, model development, model evaluation, comparison and selection, and hypothesis testing.
 * Discusses the outcome and significance of the project.
 
+![Project hypothesis page]()
+
 Page 5: ML Performance & evaluation
 
 * Provides an overview of the performance of the machine learning model in identifying powdery mildew in cherry leaves.
-* Displays model evaluation metrics such as accuracy, precision, recall, and F1-score.
-* Includes a confusion matrix visualization to understand the model's performance.
+* Displays a bar chart for the label distribution and a pie chart for the dataset distribution.
+
+![Bar chart (label distribution) & pie chart (dataset distribution)]()
+
+* Model history is displayed in two line graphs, one for the models accuracy and another for its loss.
+
+![Model history]()
+
+* Includes a confusion matrix visualization to understand the model's performance, along with a classification report to display the models evaluation metrics such as accuracy, precision, recall, and F1-score.
+
+![Confusion matrix and classification report]()
 
 ## The CRISP-DM Methodology
 
@@ -136,11 +163,17 @@ My CRISP-DM provides a structured approach for the data mining project. It outli
 
 To document this process for the Powdery Mildew detection project, a Kanban Board provided by GitHub was used in the repository's project section. A Kanban board is an agile project management tool that helped visualize the work, limit work-in-progress, and improve efficiency. It uses cards and columns to organize tasks and facilitate continuous improvement.
 
+![Kanban board]()
+
 In this project, the CRISP-DM process was divided into sprints. Each sprint is associated with epics based on the CRISP-DM tasks. These epics were further broken down into individual tasks. Throughout the workflow, tasks can progress through different statuses such as To Do, In Progress, and Done, providing a clear overview of the project's progress.
+
+![Sprints]()
 
 In addition to the tasks and epics within the CRISP-DM process, the Powdery Mildew detection project also incorporated user stories. User stories represent specific functionalities or features from the perspective of end users.
 
 To capture these user stories, comments were used within the Kanban board to provide detailed information about the tasks. These comments outlined the specific requirements, objectives, and expectations related to each user story.
+
+![Commented user stories]()
 
 By including user stories in the comments section, I could ensure that the implementation of each task aligned with the desired functionalities and provided value to the end users. This approach helped to prioritize development efforts, track progress, and maintain a user-centric focus throughout the project.
 
@@ -152,6 +185,9 @@ Images producing false predicitons
 * In this case, there seems to be a bug where an incorrect image is displayed within the confusion matrix, possibly misrepresenting the actual performance of the model. This discrepancy can lead to confusion and misinterpretation of the model's accuracy and effectiveness.
 * Healthy images wrongly predicted as Powdery Mildew:
 powdery_mildew/4c756b73-5e7d-40ec-9b36-1866c49f2e43___FREC_Pwd.M 5156_flipLR.JPG
+
+![wrong image]()
+
 * The image looks shadowed which can introduce variations in pixel intensities, which may affect the features extracted by the algorithm and lead to misclassifications.
 * To address the issue of misclassification caused by shadowed images, we could consider implementing techniques such as further data augmentation, image enhancement, and fine-tuning the model to improve the accuracy of powdery mildew detection.
 
@@ -202,6 +238,8 @@ powdery_mildew/4c756b73-5e7d-40ec-9b36-1866c49f2e43___FREC_Pwd.M 5156_flipLR.JPG
 * I manually tested each page of the dashboard after deployment and documented each test in the kanban board [Kanban](https://github.com/users/Huddy2022/projects/5).
 * With each test i documented in the comment section, its feature, action, expected result and actual result.
 
+![Testing]()
+
 ### Validation
 
 * All of the Python code in this project was validated as conforming to PEP8 standards using [Pep8](https://pep8ci.herokuapp.com/).
@@ -216,10 +254,7 @@ powdery_mildew/4c756b73-5e7d-40ec-9b36-1866c49f2e43___FREC_Pwd.M 5156_flipLR.JPG
 * Many of the project's functions were transferred from Code Institute's sample Malaria Detector project.
 * For the Keras Tuner i got alot of insight from this website [Tensorflow](https://www.tensorflow.org/tutorials/keras/keras_tuner/).
 * When i came to tuning the hyperperamter searching i used inspriation from this website for the regualizers and batch normalization [Keras website](https://keras.io/api/layers/regularizers/).
-
-### Media
-
-*
+* This repository, gave me insights into structuring my jupyter notebooks and part of my readme. [Repo](https://github.com/cla-cif/Cherry-Powdery-Mildew-Detector)
 
 ## Acknowledgements
 
