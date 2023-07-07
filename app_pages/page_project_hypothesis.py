@@ -32,7 +32,7 @@ def page_project_hypothesis_body():
         f"3. ### Model Development:\n"
         f"The machine learning model, was a convolutional neural network "
         f"(CNN), which was developed and trained on the preprocessed dataset. "
-        f"The model will was designed to classify cherry leaves as healthy or "
+        f"The model was designed to classify cherry leaves as healthy or "
         f"infected with Powdery Mildew based on their visual features. \n"
         f"4. ### Model Evaluation:\n"
         f"Each version of the nine models was trained on a training set "

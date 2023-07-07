@@ -122,6 +122,7 @@ Page 1: Quick Project Summary
   * Contains links to additional information in the project README file.
 
 ![Quick project summary page](https://github.com/Huddy2022/milestone-project-mildew-detection-in-cherry-leaves/blob/main/readme_images/Project_summary.png)
+
 Page 2: Cherry Leaves Visualizer
 
 Answers business requirements 1
@@ -269,11 +270,12 @@ powdery_mildew/4c756b73-5e7d-40ec-9b36-1866c49f2e43___FREC_Pwd.M 5156_flipLR.JPG
 ### Content
 
 * The cherry leaves dataset was linked from Kaggle and created by Code Institute.
-* The CRISP-DM that was created on my GitHub, I modelled after using this site [Specific Data science website](https://www.datascience-pm.com/crisp-dm-2/)<>.
+* The CRISP-DM that was created on my GitHub, I modelled after using this site [Specific Data science website](https://www.datascience-pm.com/crisp-dm-2/).
 * Many of the project's functions were transferred from Code Institute's sample Malaria Detector project.
 * For the Keras Tuner I got a lot of insight from this website [Tensorflow](https://www.tensorflow.org/tutorials/keras/keras_tuner/).
 * When I came to tuning the hyperparameter searching I used inspiration from this website for the regularizers and batch normalization [Keras website](https://keras.io/api/layers/regularizers/).
-* This repository, gave me insights into structuring my jupyter notebooks and part of my readme. [Repo](https://github.com/cla-cif/Cherry-Powdery-Mildew-Detector)
+* This repository, gave me insights into structuring my jupyter notebooks and part of my readme. [Repo](https://github.com/cla-cif/Cherry-Powdery-Mildew-Detector).
+* This site gave me intel on powdery mildew for my project summary page. [Powdery Mildew](https://portal.ct.gov/CAES/Fact-Sheets/Plant-Pathology/Powdery-Mildew).
 
 ## Acknowledgements
 
