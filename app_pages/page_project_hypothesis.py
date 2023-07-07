@@ -79,3 +79,10 @@ def page_project_hypothesis_body():
         f"the effectiveness of different model variations and the impact of "
         f"hyperparameters on the performance of the classification task."
     )
+
+    st.write(
+        f"For additional information, regarding each individual version and "
+        f"the process behind each models training, please visit and **read** "
+        f"the [Project README file](https://github.com/Huddy2022/milestone-"
+        f"project-mildew-detection-in-cherry-leaves/blob/main/README.md)."
+    )
